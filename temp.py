@@ -1,9 +1,10 @@
 #Step 1: Make Employee Class
 class Employee:
-    def __init__(self, first, last, salary):
+    def __init__(self, first, last, salary, position):
         self.firstname = first
         self.lastname = last
         self.salary = salary
+        self.position = position
 
 #Step 2: Make the from_string() fn
 # String --> Employee
@@ -11,7 +12,7 @@ class Employee:
 def from_string(str):
     params = str.split("-")
     #params = ["Pseu","Donym","50000"]
-    employee1 = Employee(params[0], params[1], params[2])
+    employee1 = Employee(params[0], params[1], params[2], "Intern")
     return employee1
 
 emp1 = Employee("Mary", "Sue", 60000)
